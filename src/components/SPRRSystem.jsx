@@ -388,61 +388,61 @@ const SPRRSystem = () => {
                 />
               </svg>
 
-              {/* Capa de calles y vías principales */}
-              <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 1 }}>
+              {/* Capa de calles y vías principales - responsiva */}
+              <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 1 }} viewBox="0 0 1000 800" preserveAspectRatio="none">
                 {/* Avenida principal horizontal (este-oeste) */}
-                <rect x="0" y="235" width="600" height="50" fill="#C0C0C0"/>
-                <line x1="0" y1="250" x2="600" y2="250" stroke="#FFD700" strokeWidth="3" opacity="0.6"/>
-                <line x1="0" y1="270" x2="600" y2="270" stroke="#FFD700" strokeWidth="3" opacity="0.6"/>
+                <rect x="0" y="400" width="1000" height="80" fill="#C0C0C0"/>
+                <line x1="0" y1="420" x2="1000" y2="420" stroke="#FFD700" strokeWidth="5" opacity="0.6"/>
+                <line x1="0" y1="460" x2="1000" y2="460" stroke="#FFD700" strokeWidth="5" opacity="0.6"/>
                 
                 {/* Avenida vertical (norte-sur) */}
-                <rect x="310" y="0" width="50" height="400" fill="#C0C0C0"/>
-                <line x1="325" y1="0" x2="325" y2="400" stroke="#FFD700" strokeWidth="3" opacity="0.6"/>
-                <line x1="345" y1="0" x2="345" y2="400" stroke="#FFD700" strokeWidth="3" opacity="0.6"/>
+                <rect x="520" y="0" width="80" height="800" fill="#C0C0C0"/>
+                <line x1="545" y1="0" x2="545" y2="800" stroke="#FFD700" strokeWidth="5" opacity="0.6"/>
+                <line x1="575" y1="0" x2="575" y2="800" stroke="#FFD700" strokeWidth="5" opacity="0.6"/>
                 
                 {/* Calle transversal norte-este */}
-                <path d="M 0,140 L 350,30" stroke="#A9A9A9" strokeWidth="18" opacity="0.7"/>
-                <path d="M 0,140 L 350,30" stroke="#FFD700" strokeWidth="2" opacity="0.4" strokeDasharray="6,4"/>
+                <path d="M 0,240 L 620,50" stroke="#A9A9A9" strokeWidth="30" opacity="0.7"/>
+                <path d="M 0,240 L 620,50" stroke="#FFD700" strokeWidth="4" opacity="0.4" strokeDasharray="10,6"/>
                 
                 {/* Calle transversal sur-este */}
-                <path d="M 30,350 L 420,100" stroke="#A9A9A9" strokeWidth="18" opacity="0.7"/>
-                <path d="M 30,350 L 420,100" stroke="#FFD700" strokeWidth="2" opacity="0.4" strokeDasharray="6,4"/>
+                <path d="M 50,600 L 750,180" stroke="#A9A9A9" strokeWidth="30" opacity="0.7"/>
+                <path d="M 50,600 L 750,180" stroke="#FFD700" strokeWidth="4" opacity="0.4" strokeDasharray="10,6"/>
 
                 {/* Calles secundarias */}
-                <path d="M 0,180 L 310,180" stroke="#D3D3D3" strokeWidth="12" opacity="0.6"/>
-                <path d="M 360,150 L 600,150" stroke="#D3D3D3" strokeWidth="12" opacity="0.6"/>
-                <path d="M 0,300 L 310,300" stroke="#D3D3D3" strokeWidth="12" opacity="0.6"/>
-                <path d="M 360,320 L 600,320" stroke="#D3D3D3" strokeWidth="12" opacity="0.6"/>
+                <path d="M 0,310 L 520,310" stroke="#D3D3D3" strokeWidth="20" opacity="0.6"/>
+                <path d="M 600,250 L 1000,250" stroke="#D3D3D3" strokeWidth="20" opacity="0.6"/>
+                <path d="M 0,510 L 520,510" stroke="#D3D3D3" strokeWidth="20" opacity="0.6"/>
+                <path d="M 600,530 L 1000,530" stroke="#D3D3D3" strokeWidth="20" opacity="0.6"/>
 
                 {/* Manzanas/Edificios simulados */}
                 <g opacity="0.12" fill="#696969">
                   {/* Bloque noroeste */}
-                  <rect x="20" y="20" width="50" height="60" />
-                  <rect x="80" y="15" width="45" height="70" />
-                  <rect x="135" y="25" width="55" height="55" />
+                  <rect x="30" y="30" width="80" height="100" />
+                  <rect x="120" y="20" width="75" height="120" />
+                  <rect x="220" y="40" width="90" height="90" />
                   
                   {/* Bloque noreste */}
-                  <rect x="380" y="20" width="50" height="65" />
-                  <rect x="445" y="30" width="45" height="50" />
-                  <rect x="500" y="15" width="50" height="70" />
+                  <rect x="650" y="30" width="80" height="110" />
+                  <rect x="750" y="50" width="75" height="80" />
+                  <rect x="840" y="20" width="80" height="120" />
                   
                   {/* Bloque suroeste */}
-                  <rect x="35" y="320" width="55" height="60" />
-                  <rect x="100" y="310" width="48" height="70" />
+                  <rect x="60" y="540" width="90" height="100" />
+                  <rect x="180" y="520" width="80" height="120" />
                   
                   {/* Bloque sureste */}
-                  <rect x="390" y="300" width="50" height="60" />
-                  <rect x="455" y="320" width="45" height="50" />
+                  <rect x="660" y="500" width="80" height="100" />
+                  <rect x="770" y="540" width="75" height="80" />
                 </g>
 
                 {/* Parques/Espacios verdes */}
-                <circle cx="200" cy="70" r="20" fill="#228B22" opacity="0.2"/>
-                <circle cx="480" cy="350" r="25" fill="#228B22" opacity="0.2"/>
+                <circle cx="350" cy="120" r="35" fill="#228B22" opacity="0.2"/>
+                <circle cx="800" cy="600" r="40" fill="#228B22" opacity="0.2"/>
               </svg>
 
               <div className="absolute inset-0 p-4" style={{ zIndex: 2 }}>
                 {/* Marcador de origen mejorado */}
-                <div className="absolute" style={{ left: '80px', top: '300px' }}>
+                <div className="absolute" style={{ left: '16%', top: '75%' }}>
                   <div className="absolute w-12 h-12 bg-green-400 rounded-full opacity-20 animate-pulse"></div>
                   <div className="absolute w-8 h-8 bg-green-400 rounded-full opacity-30 top-1 left-1" style={{animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) 0.2s infinite'}}></div>
                   <div className="w-6 h-6 bg-green-500 rounded-full border-4 border-white shadow-lg flex items-center justify-center relative z-10">
@@ -454,7 +454,7 @@ const SPRRSystem = () => {
                 </div>
 
                 {/* Marcador de destino mejorado */}
-                <div className="absolute" style={{ left: '470px', top: '130px' }}>
+                <div className="absolute" style={{ left: '94%', top: '30%' }}>
                   <div className="absolute w-14 h-14 bg-red-400 rounded-full opacity-15 animate-pulse"></div>
                   <div className="w-8 h-8 bg-red-600 rounded-full border-4 border-white shadow-2xl flex items-center justify-center relative z-10" style={{background: 'linear-gradient(135deg, #DC2626, #991B1B)'}}>
                     <MapPin className="text-white" size={18} />
@@ -467,9 +467,9 @@ const SPRRSystem = () => {
                 {/* Zonas de Riesgo Mejoradas */}
                 {riskZones.filter(z => z.active).map((zone, idx) => {
                   const positions = [
-                    { left: '180px', top: '265px' },
-                    { left: '340px', top: '200px' },
-                    { left: '410px', top: '155px' }
+                    { left: '45%', top: '42%' },    // Zona Industrial Norte - centro de la ruta peligrosa
+                    { left: '35%', top: '62%' },    // Puente El Carmen - parte baja
+                    { left: '72%', top: '48%' }     // Curva La Esperanza - parte derecha
                   ];
                   const isHighRisk = zone.risk === 'high';
                   return (
@@ -508,40 +508,41 @@ const SPRRSystem = () => {
                   );
                 })}
 
-                {/* Ruta original peligrosa - roja */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 3 }}>
+                {/* Ruta original peligrosa - roja - responsiva con viewBox */}
+                <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 3 }} viewBox="0 0 1000 800" preserveAspectRatio="none">
                   {/* Sombra/Efecto de profundidad */}
                   <path
-                    d="M 80,300 L 180,265 L 340,200 L 410,155 L 460,120"
+                    d="M 160,600 L 280,600 L 280,400 L 450,340 L 450,240 L 720,320 L 940,240"
                     stroke="#333"
-                    strokeWidth="6"
+                    strokeWidth="12"
                     fill="none"
                     opacity="0.1"
                   />
-                  {/* Ruta principal */}
+                  {/* Ruta peligrosa - pasa por las 3 zonas de riesgo */}
                   <path
-                    d="M 80,300 L 180,265 L 340,200 L 410,155 L 460,120"
+                    d="M 160,600 L 280,600 L 280,400 L 450,340 L 450,240 L 720,320 L 940,240"
                     stroke="#EF4444"
-                    strokeWidth="5"
+                    strokeWidth="10"
                     fill="none"
-                    strokeDasharray="10,6"
+                    strokeDasharray="20,12"
                     opacity="0.8"
                     strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   {/* Borde decorativo */}
                   <path
-                    d="M 80,300 L 180,265 L 340,200 L 410,155 L 460,120"
+                    d="M 160,600 L 280,600 L 280,400 L 450,340 L 450,240 L 720,320 L 940,240"
                     stroke="#DC2626"
-                    strokeWidth="2"
+                    strokeWidth="4"
                     fill="none"
                     opacity="0.4"
-                    strokeDasharray="10,6"
+                    strokeDasharray="20,12"
                     strokeLinecap="round"
                   />
                 </svg>
 
-                {/* Ruta alternativa segura - azul a verde */}
-                <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 4 }}>
+                {/* Ruta alternativa segura - azul a verde - responsiva */}
+                <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ zIndex: 4 }} viewBox="0 0 1000 800" preserveAspectRatio="none">
                   <defs>
                     <linearGradient id="safeRouteGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                       <stop offset="0%" stopColor="#3B82F6" />
@@ -549,7 +550,7 @@ const SPRRSystem = () => {
                       <stop offset="100%" stopColor="#10B981" />
                     </linearGradient>
                     <filter id="glow">
-                      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
                       <feMerge>
                         <feMergeNode in="coloredBlur"/>
                         <feMergeNode in="SourceGraphic"/>
@@ -558,61 +559,70 @@ const SPRRSystem = () => {
                   </defs>
                   {/* Sombra exterior */}
                   <path
-                    d="M 80,300 Q 140,325 200,340 Q 280,355 360,345 Q 420,335 460,300 Q 480,280 485,240 Q 488,200 480,160 Q 475,140 470,130"
+                    d="M 160,600 L 280,600 L 280,360 L 400,360 L 400,140 L 545,140 L 545,310 L 940,310"
                     stroke="#000"
-                    strokeWidth="8"
+                    strokeWidth="16"
                     fill="none"
                     opacity="0.1"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
-                  {/* Ruta principal segura con gradiente */}
+                  {/* Ruta principal segura - sigue calles */}
                   <path
-                    d="M 80,300 Q 140,325 200,340 Q 280,355 360,345 Q 420,335 460,300 Q 480,280 485,240 Q 488,200 480,160 Q 475,140 470,130"
+                    d="M 160,600 L 280,600 L 280,360 L 400,360 L 400,140 L 545,140 L 545,310 L 940,310"
                     stroke="url(#safeRouteGradient)"
-                    strokeWidth="7"
+                    strokeWidth="14"
                     fill="none"
-                    strokeDasharray="15,10"
+                    strokeDasharray="30,20"
                     strokeDashoffset={680 - (680 * routeProgress / 100)}
                     opacity="0.95"
                     filter="url(#glow)"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     style={{
-                      strokeLinecap: 'round',
-                      strokeLinejoin: 'round',
                       transition: 'stroke-dashoffset 1s linear'
                     }}
                   />
                   {/* Borde reforzado */}
                   <path
-                    d="M 80,300 Q 140,325 200,340 Q 280,355 360,345 Q 420,335 460,300 Q 480,280 485,240 Q 488,200 480,160 Q 475,140 470,130"
+                    d="M 160,600 L 280,600 L 280,360 L 400,360 L 400,140 L 545,140 L 545,310 L 940,310"
                     stroke="#0EA5E9"
-                    strokeWidth="2"
+                    strokeWidth="4"
                     fill="none"
                     opacity="0.6"
                     strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
-                {/* Vehicle Position following the safe route */}
+                {/* Posición del vehículo siguiendo la ruta segura responsiva */}
                 <div
                   className="absolute transform -translate-x-1/2 -translate-y-1/2 z-10"
                   style={{
-                    // Precise calculation to follow the safe route curve smoothly
-                    left: routeProgress <= 20
-                      ? `${80 + (routeProgress * 6)}px`
-                      : routeProgress <= 40
-                      ? `${200 + ((routeProgress - 20) * 8)}px`
-                      : routeProgress <= 60
-                      ? `${360 + ((routeProgress - 40) * 3)}px`
-                      : routeProgress <= 80
-                      ? `${420 + ((routeProgress - 60) * 3.25)}px`
-                      : `${485 - ((routeProgress - 80) * 0.75)}px`,
-                    top: routeProgress <= 20
-                      ? `${300 + (routeProgress * 2)}px`
-                      : routeProgress <= 40
-                      ? `${340 + ((routeProgress - 20) * 0.25)}px`
-                      : routeProgress <= 60
-                      ? `${345 - ((routeProgress - 40) * 2.75)}px`
-                      : routeProgress <= 80
-                      ? `${290 - ((routeProgress - 60) * 7.5)}px`
-                      : `${140 - ((routeProgress - 80) * 0.5)}px`,
+                    // Nueva ruta responsiva: M 160,600 L 280,600 L 280,360 L 400,360 L 400,140 L 545,140 L 545,310 L 940,310
+                    // Segmento 1 (0-14.28%): De 160,600 a 280,600 (horizontal)
+                    left: routeProgress <= 14.28
+                      ? `calc(16% + (${routeProgress / 14.28} * (28% - 16%)))`
+                      // Segmento 2 (14.28-42.85%): De 280,600 a 280,360 (vertical)
+                      : routeProgress <= 42.85
+                      ? `28%`
+                      // Segmento 3 (42.85-71.42%): De 280,360 a 400,360 (horizontal)
+                      : routeProgress <= 71.42
+                      ? `calc(28% + (${(routeProgress - 42.85) / 28.57} * (40% - 28%)))`
+                      // Segmento 4 (71.42-85.71%): De 400,360 a 400,140 (vertical)
+                      : routeProgress <= 85.71
+                      ? `40%`
+                      // Segmento 5 (85.71-100%): De 400,140 a 940,310 (diagonal final)
+                      : `calc(40% + (${(routeProgress - 85.71) / 14.29} * (94% - 40%)))`,
+                      
+                    top: routeProgress <= 14.28
+                      ? `75%`
+                      : routeProgress <= 42.85
+                      ? `calc(75% - (${(routeProgress - 14.28) / 28.57} * (75% - 45%)))`
+                      : routeProgress <= 71.42
+                      ? `45%`
+                      : routeProgress <= 85.71
+                      ? `calc(45% - (${(routeProgress - 71.42) / 14.29} * (45% - 35%)))`
+                      : `calc(35% + (${(routeProgress - 85.71) / 14.29} * (77.5% - 35%)))`,
                     transition: 'all 1s linear'
                   }}
                 >
