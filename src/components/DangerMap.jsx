@@ -70,9 +70,9 @@ const DangerMap = () => {
         if (currentlyInDanger && !isInsideRef.current) {
             // ACABA DE ENTRAR
             isInsideRef.current = true;
-            setIsAlert(true);
-            setStatusMsg("¡Estás en una zona peligrosa!");
-            alert("¡Alerta! Estás en una zona peligrosa.");
+            // setIsAlert(true); // DISABLED
+            setStatusMsg("Entrando en zona de riesgo");
+            // alert("¡Alerta! Estás en una zona peligrosa."); // DISABLED
         } else if (!currentlyInDanger && isInsideRef.current) {
             // ACABA DE SALIR
             isInsideRef.current = false;
