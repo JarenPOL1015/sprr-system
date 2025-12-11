@@ -50,6 +50,12 @@ const DangerMap = () => {
             ]}
             pathOptions={{ color: 'red', weight: 2, fillOpacity: 0.5 }}
         />
+        <Circle
+            key="c2"
+            center={[-2.14402, -79.96209]}
+            radius={500}
+            pathOptions={{ color: 'red', fillColor: '#f03', fillOpacity: 0.5 }}
+        />,
     ];
 
     // Lógica de detección de colisión
