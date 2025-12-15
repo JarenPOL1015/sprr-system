@@ -52,8 +52,8 @@ const DangerMap = () => {
         />,
         <Circle
             key="c2"
-            center={[-2.14561, -79.96605]}
-            radius={30}
+            center={[-2.145426666711421, -79.96594468518431]}
+            radius={20}
             pathOptions={{ color: 'red', fillColor: '#f03', fillOpacity: 0.5 }}
         />
     ];
