@@ -24,19 +24,20 @@ const DangerMap = () => {
     const [isAlert, setIsAlert] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
     const [currentAlert, setCurrentAlert] = useState(null);
+    const [feedback, setFeedback] = useState([]);
 
     const handleAcceptAlternative = () => {
     setShowAlert(false);
-    setAlerts(prev => prev.map(a =>
+    /*setAlerts(prev => prev.map(a =>
       a.id === currentAlert.id ? { ...a, action: 'accepted' } : a
-    ));
+    ));*/
     };
 
     const handleRejectAlternative = () => {
         setShowAlert(false);
-        setAlerts(prev => prev.map(a =>
+        /*setAlerts(prev => prev.map(a =>
         a.id === currentAlert.id ? { ...a, action: 'rejected' } : a
-        ));
+        ));*/
     };
 
     const submitFeedback = (rating) => {
