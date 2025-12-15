@@ -37,8 +37,8 @@ const DriverDashboard = ({
 
             {/* Alert Modal */}
             {showAlert && currentAlert && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-                    <div className={`bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 ${currentAlert.risk === 'high' ? 'border-4 border-red-500' : 'border-4 border-orange-500'
+                <div className="fixed inset-0 bg-black bg-opacity-50 z-[9999] flex items-center justify-center p-4">
+                    <div className={`relative z-[10000] bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 ${currentAlert.risk === 'high' ? 'border-4 border-red-500' : 'border-4 border-orange-500'
                         }`}>
                         <div className="text-center mb-4">
                             <div className={`w-20 h-20 rounded-full mx-auto flex items-center justify-center mb-4 ${currentAlert.risk === 'high' ? 'bg-red-100' : 'bg-orange-100'

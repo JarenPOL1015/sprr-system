@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, FeatureGroup, Circle, Rectangle, Polygon, Popup } from 'react-leaflet';
 import { EditControl } from 'react-leaflet-draw';
-import { AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 import L from 'leaflet';
 
 // Importar CSS de Leaflet y Draw
@@ -78,61 +77,14 @@ const DangerMap = () => {
             center={[-2.145426666711421, -79.96594468518431]}
             radius={27}
             pathOptions={{ color: 'red', fillColor: '#f03', fillOpacity: 0.5 }}
+        />,
+         <Circle
+            key="c2"
+            center={[-2.01426, -79.86703]}
+            radius={27}
+            pathOptions={{ color: 'red', fillColor: '#f03', fillOpacity: 0.5 }}
         />
     ];
-
-    {/* Alert Modal */}
-    {showAlert && currentAlert && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-            <div className={`bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 ${currentAlert.risk === 'high' ? 'border-4 border-red-500' : 'border-4 border-orange-500'
-                }`}>
-                <div className="text-center mb-4">
-                    <div className={`w-20 h-20 rounded-full mx-auto flex items-center justify-center mb-4 ${currentAlert.risk === 'high' ? 'bg-red-100' : 'bg-orange-100'
-                        }`}>
-                        <AlertTriangle className={currentAlert.risk === 'high' ? 'text-red-600' : 'text-orange-600'} size={40} />
-                    </div>
-                    <h2 className="text-2xl font-bold text-gray-800 mb-2">¡ALERTA DE SEGURIDAD!</h2>
-                    <p className="text-lg font-semibold text-gray-700">{currentAlert.message}</p>
-                </div>
-
-                <div className="bg-gray-50 p-4 rounded-lg mb-4">
-                    <p className="text-gray-700 font-medium">{currentAlert.recommendation}</p>
-                </div>
-
-                <div className="space-y-3">
-                    <button
-                        onClick={handleAcceptAlternative}
-                        className="w-full bg-green-600 text-white py-4 rounded-lg font-semibold hover:bg-green-700 transition flex items-center justify-center gap-2"
-                    >
-                        <CheckCircle size={24} />
-                        Aceptar Ruta Alternativa
-                    </button>
-                    <button
-                        onClick={handleRejectAlternative}
-                        className="w-full bg-gray-600 text-white py-4 rounded-lg font-semibold hover:bg-gray-700 transition flex items-center justify-center gap-2"
-                    >
-                        <XCircle size={24} />
-                        Continuar Ruta Actual
-                    </button>
-                </div>
-
-                <div className="mt-4 pt-4 border-t">
-                    <p className="text-sm text-gray-600 mb-2 text-center">¿Qué tan útil fue esta alerta?</p>
-                    <div className="flex gap-2 justify-center">
-                        {[1, 2, 3, 4, 5].map(rating => (
-                            <button
-                                key={rating}
-                                onClick={() => submitFeedback(rating)}
-                                className="w-10 h-10 rounded-full bg-blue-100 hover:bg-blue-200 transition font-semibold text-blue-700"
-                            >
-                                {rating}
-                            </button>
-                        ))}
-                    </div>
-                </div>
-            </div>
-        </div>
-    )}
 
      const triggerAlert = (zone) => {
         const newAlert = {
@@ -144,7 +96,7 @@ const DangerMap = () => {
         timestamp: new Date().toLocaleTimeString()
         };
         setCurrentAlert(newAlert);
-        // setShowAlert(true);
+        setShowAlert(true);
         // setAlerts(prev => [newAlert, ...prev.slice(0, 9)]);
     };
 

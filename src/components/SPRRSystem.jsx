@@ -93,8 +93,8 @@ const SPRRSystem = () => {
 
       // Si está cerca de la zona, generar alerta
       if (distance < detectionRadius && !showAlert) {
-        // triggerAlert(zone);
-        // setAlertedZones(prev => new Set([...prev, zone.id]));
+        triggerAlert(zone);
+        setAlertedZones(prev => new Set([...prev, zone.id]));
       }
     });
   };
@@ -109,7 +109,7 @@ const SPRRSystem = () => {
       timestamp: new Date().toLocaleTimeString()
     };
     setCurrentAlert(newAlert);
-    // setShowAlert(true);
+    setShowAlert(true);
     setAlerts(prev => [newAlert, ...prev.slice(0, 9)]);
   };
 
