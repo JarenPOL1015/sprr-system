@@ -52,8 +52,8 @@ const DangerMap = () => {
         />,
         <Circle
             key="c2"
-            center={[-2.14402, -79.96209]}
-            radius={500}
+            center={[-2.14561, -79.96605]}
+            radius={100}
             pathOptions={{ color: 'red', fillColor: '#f03', fillOpacity: 0.5 }}
         />
     ];
@@ -76,7 +76,7 @@ const DangerMap = () => {
         if (currentlyInDanger && !isInsideRef.current) {
             // ACABA DE ENTRAR
             isInsideRef.current = true;
-            setIsAlert(true); // DISABLED
+            setIsAlert(true);
             setStatusMsg("Entrando en zona de riesgo");
             alert("¡Alerta! Estás en una zona peligrosa.");
         } else if (!currentlyInDanger && isInsideRef.current) {
