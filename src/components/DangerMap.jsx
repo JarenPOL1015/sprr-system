@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { MapContainer, TileLayer, Marker, FeatureGroup, Circle, Rectangle, Polygon, Popup } from 'react-leaflet';
 import { EditControl } from 'react-leaflet-draw';
+import { AlertTriangle, CheckCircle, XCircle } from 'lucide-react';
 import L from 'leaflet';
 
 // Importar CSS de Leaflet y Draw
@@ -23,6 +24,25 @@ const DangerMap = () => {
     const [isAlert, setIsAlert] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
     const [currentAlert, setCurrentAlert] = useState(null);
+
+    const handleAcceptAlternative = () => {
+    setShowAlert(false);
+    setAlerts(prev => prev.map(a =>
+      a.id === currentAlert.id ? { ...a, action: 'accepted' } : a
+    ));
+    };
+
+    const handleRejectAlternative = () => {
+        setShowAlert(false);
+        setAlerts(prev => prev.map(a =>
+        a.id === currentAlert.id ? { ...a, action: 'rejected' } : a
+        ));
+    };
+
+    const submitFeedback = (rating) => {
+        setFeedback(prev => [...prev, { alertId: currentAlert.id, rating, timestamp: new Date() }]);
+        setShowAlert(false);
+    };
 
     // Referencias
     const featureGroupRef = useRef(null); // Para acceder a las zonas dibujadas
@@ -124,7 +144,7 @@ const DangerMap = () => {
         };
         setCurrentAlert(newAlert);
         // setShowAlert(true);
-        setAlerts(prev => [newAlert, ...prev.slice(0, 9)]);
+        // setAlerts(prev => [newAlert, ...prev.slice(0, 9)]);
     };
 
     // Lógica de detección de colisión
